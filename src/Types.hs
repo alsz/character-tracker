@@ -13,11 +13,11 @@ defaultSettings = CTSettings { verbose = False
 
 type Name = String
 
-data Stat = ArbitraryNumber Name Int Bool
-          | BoundedNumber Name Int Int Int
+data Stat = ArbitraryNumber Name Integer Bool
+          | BoundedNumber Name Integer Integer Integer
           | ArbitraryString Name String Bool
-          | StatBoundedNumber Name Int Int Name (Int -> (Int, Int))
-          | StatBasedNumber Name Name (Int -> Int)
+          | StatBoundedNumber Name Integer Name (Integer -> (Integer, Integer))
+          | StatBasedNumber Name Name (Integer -> Integer)
 
 data Item = Item { cTitle :: String
                  , cKeywords :: [String]
